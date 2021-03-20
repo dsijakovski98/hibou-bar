@@ -4,12 +4,6 @@ function App() {
   return (
     <>
       <Homepage />
-      <h1>afdjsdhfkjhsdkjgs</h1>
-      <h1>afdjsdhfkjhsdkjgs</h1>
-      <h1>afdjsdhfkjhsdkjgs</h1>
-      <h1>afdjsdhfkjhsdkjgs</h1>
-      <h1>afdjsdhfkjhsdkjgs</h1>
-      <h1>afdjsdhfkjhsdkjgs</h1>
     </>
   );
 }
