@@ -9,7 +9,7 @@ function SpringOverlay() {
             <Spring
                 from={{opacity: 0, x: 6369}}
                 to={{opacity: 1, x: 4500}}
-                config={{duration: 2000}}
+                config={{duration: 2000, delay: 500}}
             >
                 {
                     props => (

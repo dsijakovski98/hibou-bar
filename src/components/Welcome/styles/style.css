@@ -28,12 +28,18 @@
   width: 100%;
 }
 
+.welcome-logo:hover path {
+  stroke: #666;
+}
+
 .logo-container {
   width: 70%;
   margin-bottom: 3em;
 }
 
 .welcome-logo path {
+  -webkit-transition: stroke 0.3s ease-in-out;
+  transition: stroke 0.3s ease-in-out;
   stroke: white;
   stroke-dasharray: 6369;
   -webkit-animation: fill 1s ease forwards 1s;
@@ -47,8 +53,8 @@
   background: transparent;
   border: 3px solid white;
   border-radius: 5px;
-  -webkit-animation: fade-in 3s ease forwards;
-          animation: fade-in 3s ease forwards;
+  -webkit-animation: fade-in 3.5s ease forwards;
+          animation: fade-in 3.5s ease forwards;
   -webkit-transition: background 0.5s ease-in-out;
   transition: background 0.5s ease-in-out;
   cursor: pointer;
