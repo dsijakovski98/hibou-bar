@@ -1,0 +1,244 @@
+.homepage-section {
+  background: url(/src/images/viber-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  width: 100%;
+  min-height: 100vh;
+  background-blend-mode: multiply;
+  background-color: #a3a3a3;
+  overflow-x: hidden;
+}
+
+.navbar {
+  z-index: 1;
+  width: 100%;
+  position: fixed;
+}
+
+.nav-container {
+  width: 80%;
+  margin: 0 auto;
+  // background: red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 0;
+}
+
+.logo svg {
+  width: 160px;
+  height: 100%;
+  fill: transparent;
+  transition: fill 0.3s ease-in-out;
+
+  path {
+    stroke-width: 3.5;
+  }
+  &:hover {
+    fill: white;
+  }
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li a {
+  display: inline-block;
+  margin-left: 3.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #d6d6d6;
+
+  font-size: 1.2rem;
+  font-weight: 300;
+
+  text-shadow: 2px 2px 1px black;
+  transition: all 0.15s ease-in-out;
+
+  &:hover {
+    transform: scale(1.13);
+  }
+}
+
+.hamburger-checkbox,
+.hamburger-toggle {
+  display: none;
+}
+
+.hamburger-toggle {
+  color: white;
+}
+
+.homepage-container {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -5%);
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slogan h1 {
+  color: whitesmoke;
+  font-size: 2.75rem;
+  font-weight: 300;
+  text-shadow: 2px 2px 1px black;
+  text-transform: uppercase;
+}
+
+.slogan h3 {
+  color: whitesmoke;
+  font-size: 1.8rem;
+  font-weight: 200;
+  text-shadow: 2px 2px 1px black;
+
+  b {
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+.homepage-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+}
+
+.action-button {
+  border: 2px solid whitesmoke;
+  border-radius: 0.2em;
+  background: transparent;
+  color: whitesmoke;
+  padding: 0.5em 3.5em;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  transition: background 0.5s ease, color 1s ease;
+
+  &:hover {
+    background: whitesmoke;
+    color: #222;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .slogan h1 {
+    font-size: 2.5rem;
+  }
+  .slogan h3 {
+    font-size: 1.5rem;
+  }
+
+  .action-button {
+    padding: 0.5em 2.5em;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .action-button {
+    font-size: 1.2rem;
+  }
+
+  .homepage-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2em;
+  }
+
+  .logo {
+    z-index: 3;
+  }
+
+  .hamburger-toggle {
+    display: block;
+    z-index: 5;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    span {
+      position: relative;
+      transition: background 0.3s ease;
+    }
+
+    span,
+    span::before,
+    span::after {
+      content: "";
+      display: block;
+      background: white;
+      height: 4px;
+      width: 2.5em;
+      border-radius: 2px;
+    }
+
+    span::before {
+      position: absolute;
+      bottom: 0;
+      transform: translate(0, -10px);
+      transition: all 0.3s ease;
+    }
+
+    span::after {
+      position: absolute;
+      top: 0;
+      transform: translate(0, 10px);
+      transition: all 0.3s ease;
+    }
+  }
+
+  .nav-links {
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    transform: translate(100%, 0);
+    transition: transform 0.2s ease-in-out;
+
+    overscroll-behavior: contain;
+  }
+
+  .hamburger-checkbox:checked ~ .nav-links {
+    transform: translate(0, 0);
+    transition: transform 0.5s ease-in-out;
+
+    a {
+      margin-left: 0;
+      font-size: 2rem;
+    }
+  }
+
+  $angle: 45deg;
+
+  .hamburger-checkbox:checked ~ .hamburger-toggle {
+    span {
+      background: rgba(0, 0, 0, 0);
+    }
+    span::before {
+      transform: rotate(-$angle);
+    }
+
+    span::after {
+      transform: rotate($angle);
+    }
+  }
+}
