@@ -1,9 +1,12 @@
-import Homepage from "./components/Homepage/Homepage";
+import Homepage from "./components/Homepage/Homepage"
+import { Route } from 'react-router-dom'
+import SpringOverlay from "./components/Welcome/SpringOverlay";
 
 function App() {
   return (
     <>
-      <Homepage />
+    <Route path='/' exact component={SpringOverlay} />
+    <Route path='/home'exact component={Homepage} />
     </>
   );
 }
