@@ -46,6 +46,12 @@
           animation: fill 1s ease forwards 1s;
 }
 
+.welcome-overlay a {
+  pointer-events: none;
+  -webkit-animation: fade-in 3.5s ease forwards;
+          animation: fade-in 3.5s ease forwards;
+}
+
 .welcome-overlay button {
   padding: 0.3em 1.8em;
   color: white;
@@ -53,11 +59,9 @@
   background: transparent;
   border: 3px solid white;
   border-radius: 5px;
-  -webkit-animation: fade-in 3.5s ease forwards;
-          animation: fade-in 3.5s ease forwards;
+  cursor: pointer;
   -webkit-transition: background 0.5s ease-in-out;
   transition: background 0.5s ease-in-out;
-  cursor: pointer;
 }
 
 .welcome-overlay button:hover {
@@ -91,24 +95,36 @@
 @-webkit-keyframes fade-in {
   0% {
     opacity: 0;
+    pointer-events: none;
   }
   50% {
     opacity: 0;
+    pointer-events: none;
+  }
+  99% {
+    pointer-events: none;
   }
   100% {
     opacity: 1;
+    pointer-events: all;
   }
 }
 
 @keyframes fade-in {
   0% {
     opacity: 0;
+    pointer-events: none;
   }
   50% {
     opacity: 0;
+    pointer-events: none;
+  }
+  99% {
+    pointer-events: none;
   }
   100% {
     opacity: 1;
+    pointer-events: all;
   }
 }
 
