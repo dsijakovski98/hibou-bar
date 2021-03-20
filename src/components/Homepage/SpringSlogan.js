@@ -1,5 +1,6 @@
 import React from 'react'
 import { Spring } from 'react-spring/renderprops'
+import { Link } from 'react-router-dom'
 
 function SpringSlogan() {
     return (
@@ -16,7 +17,7 @@ function SpringSlogan() {
                         </div>
                     
                         <div className='action-button-container'>
-                            <button className='action-button'>See our story</button>
+                            <Link to='/home'><button className='action-button'>See our story</button></Link>
                         </div>
                     </div>
                 )

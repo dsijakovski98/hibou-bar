@@ -1,5 +1,6 @@
 import React from 'react'
-import { Spring } from 'react-spring/renderprops';
+import { Spring } from 'react-spring/renderprops'
+import { Link } from 'react-router-dom'
 
 function NavLink({name, path, delay}) {
     return (
@@ -11,7 +12,7 @@ function NavLink({name, path, delay}) {
             {
                 props => (
                     <div style={props}>
-                        <li><a href={path}>{name}</a></li>
+                        <li><Link to={path}>{name}</Link></li>
                     </div>
                 )
             }
