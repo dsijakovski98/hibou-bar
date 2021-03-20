@@ -17,7 +17,7 @@ function Navbar() {
                     <ul className='nav-links'>
                         <li><a href="/">Home</a></li>
                         <li><a href="/">Cocktails</a></li>
-                        <li><a href="/">Coffes</a></li>
+                        <li><a href="/">Coffees</a></li>
                         <li><a href="/">About us</a></li>
                     </ul>
 
